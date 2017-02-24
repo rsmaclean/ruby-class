@@ -1,17 +1,14 @@
-num = 99
-while num > 0
-
+def bottle_desc(num)
   bottle = "bottle"
   if num != 1
     bottle<<"s"
   end
+  bottle
+end
 
-  bottle_minus_1 = "bottle"
-  if num-1 != 1
-    bottle_minus_1<<"s"
-  end
-
-  puts "#{num} #{bottle} of beer on the wall, #{num} #{bottle} of beer. Take one down, pass it around, #{num-1} #{bottle_minus_1} of beer on the wall."
+num = 99
+while num > 0
+  puts "#{num} #{bottle_desc(num)} of beer on the wall, #{num} #{bottle_desc(num)} of beer. Take one down, pass it around, #{num-1} #{bottle_desc(num-1)} of beer on the wall."
   num = num-1
 end
 
