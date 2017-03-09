@@ -15,12 +15,18 @@ class DictionarySort
     end
   end
 
-  def dictionary_sort sorted, unsorted
+  def sort sorted, unsorted
     if (unsorted.size == 0)
       return
     end
     add_to_sorted_array unsorted.pop, sorted
-    dictionary_sort  sorted, unsorted
+    sort  sorted, unsorted
+  end
+
+  def dictionary_sort words
+    sorted = []
+    sort sorted,  words
+    sorted
   end
 
 end
